@@ -8,7 +8,7 @@ metadata:
     # api.openshift.com/environment: staging
     # api.openshift.com/id: 2epas2gqpkmqnu61lt9f7o6rso3hk1qm
     # api.openshift.com/legal-entity-id: 1HELaFOf2YHWwwvt3XMbT5Mja7M
-    # api.openshift.com/managed: "true"
+    api.openshift.com/managed: "true"
     # api.openshift.com/name: tnierman-certman
     # api.openshift.com/product: osd
     # api.openshift.com/service-lb-quota: "0"
