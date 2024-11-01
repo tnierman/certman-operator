@@ -57,7 +57,7 @@ spec:
   #    name: default
   #    servingCertificate: primary-cert-bundle
   #  installAttemptsLimit: 3
-  #  installed: true
+  installed: true
   #  manageDNS: true
   #  platform:
   #    aws:
