@@ -28,11 +28,11 @@ metadata:
   namespace: test-certman
 spec:
   baseDomain: test-certman.xqmr.s1.devshift.org
-  #  certificateBundles:
-  #  - certificateSecretRef:
-  #      name: primary-cert-bundle-secret
-  #    generate: true
-  #    name: primary-cert-bundle
+  certificateBundles:
+  - certificateSecretRef:
+      name: test-certman-secret
+    generate: true
+    name: test-certman-secret
   #  clusterMetadata:
   #    adminKubeconfigSecretRef:
   #      name: p4b4m3j0l0h1y9u-0-j9zrc-admin-kubeconfig
