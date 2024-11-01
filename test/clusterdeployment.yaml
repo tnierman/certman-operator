@@ -1,0 +1,82 @@
+apiVersion: hive.openshift.io/v1
+kind: ClusterDeployment
+metadata:
+  labels:
+    # api.openshift.com/ccs: "false"
+    # api.openshift.com/channel-group: stable
+    # api.openshift.com/cluster-admin: "true"
+    # api.openshift.com/environment: staging
+    # api.openshift.com/id: 2epas2gqpkmqnu61lt9f7o6rso3hk1qm
+    # api.openshift.com/legal-entity-id: 1HELaFOf2YHWwwvt3XMbT5Mja7M
+    # api.openshift.com/managed: "true"
+    # api.openshift.com/name: tnierman-certman
+    # api.openshift.com/product: osd
+    # api.openshift.com/service-lb-quota: "0"
+    # api.openshift.com/short-name: p4b4m3j0l0h1y9u
+    # api.openshift.com/storage-quota-gib: "100"
+    # ext-managed.openshift.io/legacy-ingress-support: "false"
+    # ext-managed.openshift.io/uwm-disabled: "false"
+    # hive.openshift.io/cluster-platform: aws
+    # hive.openshift.io/cluster-region: us-west-1
+    # hive.openshift.io/cluster-type: managed
+    # hive.openshift.io/resume-skips-cluster-operators: "true"
+    # hive.openshift.io/version: 4.17.2
+    # hive.openshift.io/version-major: "4"
+    # hive.openshift.io/version-major-minor: "4.17"
+    # hive.openshift.io/version-major-minor-patch: 4.17.2
+  name: test-certman
+  namespace: test-certman
+spec:
+  baseDomain: test-certman.xqmr.s1.devshift.org
+  #  certificateBundles:
+  #  - certificateSecretRef:
+  #      name: primary-cert-bundle-secret
+  #    generate: true
+  #    name: primary-cert-bundle
+  #  clusterMetadata:
+  #    adminKubeconfigSecretRef:
+  #      name: p4b4m3j0l0h1y9u-0-j9zrc-admin-kubeconfig
+  #    adminPasswordSecretRef:
+  #      name: p4b4m3j0l0h1y9u-0-j9zrc-admin-password
+  #    clusterID: f8193140-88c5-4904-83de-b21daa46f1a9
+  #    infraID: p4b4m3j0l0h1y9u-8llqr
+  platform:
+    aws:
+      hostedZoneRole: ""
+      region: us-west-1
+  clusterName: test-certman
+  #  controlPlaneConfig:
+  #    apiURLOverride: rh-api.p4b4m3j0l0h1y9u.xqmr.s1.devshift.org:6443
+  #    servingCertificates:
+  #      additional:
+  #      - domain: rh-api.p4b4m3j0l0h1y9u.xqmr.s1.devshift.org
+  #        name: primary-cert-bundle
+  #      default: primary-cert-bundle
+  #  ingress:
+  #  - domain: apps.p4b4m3j0l0h1y9u.xqmr.s1.devshift.org
+  #    name: default
+  #    servingCertificate: primary-cert-bundle
+  #  installAttemptsLimit: 3
+  #  installed: true
+  #  manageDNS: true
+  #  platform:
+  #    aws:
+  #      credentialsSecretRef:
+  #        name: aws
+  #      privateLink:
+  #        enabled: false
+  #      region: us-west-1
+  #  provisioning:
+  #    imageSetRef:
+  #      name: openshift-v4.17.2
+  #    installConfigSecretRef:
+  #      name: install-config
+  #    installerEnv:
+  #    - name: OPENSHIFT_INSTALL_SKIP_HOSTCRYPT_VALIDATION
+  #      value: "true"
+  #    manifestsConfigMapRef:
+  #      name: cluster-manifests
+  #    sshPrivateKeySecretRef:
+  #      name: ssh
+  #  pullSecretRef:
+  #    name: pull

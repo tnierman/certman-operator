@@ -79,6 +79,15 @@ func (r *CertificateRequestReconciler) Reconcile(ctx context.Context, request re
 	reqLogger := log.WithValues("Request.Namespace", request.Namespace, "Request.Name", request.Name)
 
 	reqLogger.Info("reconciling CertificateRequest")
+
+
+
+	// TODO: remove after testing
+	return reconcile.Result{}, nil
+
+
+
+
 	envvar, present := os.LookupEnv(fedrampEnvVariable)
 	if len(envvar) == 0 || !present {
 		reqLogger.Info("FEDRAMP environment variable unset, defaulting to false")

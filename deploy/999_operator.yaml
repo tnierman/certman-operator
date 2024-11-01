@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: certman-operator
+  namespace: certman-operator
 spec:
   replicas: 1
   selector:
@@ -15,7 +16,7 @@ spec:
       serviceAccountName: certman-operator
       containers:
         - name: certman-operator
-          image: quay.io/app-sre/certman-operator
+          image: quay.io/tnierman_openshift/certman-operator:latest
           command:
           - certman-operator
           imagePullPolicy: Always
